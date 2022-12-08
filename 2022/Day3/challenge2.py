@@ -5,11 +5,11 @@ with open('input/input.txt') as f:
 alphabet = list(string.ascii_lowercase) + list(string.ascii_uppercase)
 
 tuppleList = []
-#Create list a tupple with both halfs
+#Create list a tupple with each three thirds
 for x in range (0, len(formatted), 3):
     tuppleList.append((formatted[x], formatted[x+1], formatted[x+2]))
 
-#Iterate through each tupple to see the common letter from its two elements
+#Iterate through each tupple to see the common letter from its three elements
 sumOfCharacters = 0
 for x in tuppleList:
     commonCharacter = ''.join(set(x[0]).intersection(x[1]).intersection(x[2]))
